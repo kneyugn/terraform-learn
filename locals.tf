@@ -4,4 +4,5 @@ locals {
   repo_name        = var.repo_name
   repo_description = var.repo_description
   access_token     = var.access_token
+  init_files       = var.init_files
 }

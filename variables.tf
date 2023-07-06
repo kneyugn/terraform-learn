@@ -22,3 +22,10 @@ variable "repo_description" {
   default     = "this repo was created with terraform"
   description = "description of repository"
 }
+
+variable "init_files" {
+  type = map(string)
+  default = {
+    ".gitignore" = ".terraform"
+  }
+}
