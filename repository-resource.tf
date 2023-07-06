@@ -21,7 +21,8 @@ resource "github_repository_file" "file-created" {
 
 resource "github_issue" "first-issue" {
   repository = local.repo_name
-  title      = "Terraform issue"
-  body       = "this issue was created with terraform"
+  count      = 3
+  title      = "Terraform issue ${count.index}"
+  body       = "this issue was created with terraform ${count.index}"
   depends_on = [github_repository.terraform-repos]
 }
